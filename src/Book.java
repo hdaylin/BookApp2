@@ -53,10 +53,9 @@ public class Book {
 	
 @Override 
 public String toString(){
-	return this.sku; 
+	return "SKU: " + this.sku + " Title: " +this.title +" Description:  " +this.description;
 }
-	
-	
+
 	
 	
 

@@ -5,6 +5,8 @@ public class BookDB {
 
 	public static void main(String[] args) {
 	
+		String userinput;
+		
 		Scanner keyboard = new Scanner(System.in);
 		
 		ArrayList<Book> books = new ArrayList<Book>(); 
@@ -22,13 +24,26 @@ public class BookDB {
 		books.add(f); 
 		
 		
+	System.out.println("Enter an SKU"); 
+	userinput = keyboard.next(); 
 	
+	outputbook(userinput, keyboard, books);
+
+} 
+
+	
+	public static void outputbook(String userinput, Scanner keyboard,  ArrayList <Book> books){
+
 		for (Book book:books){  
 			
+			if (userinput.equals(book.getSku()))
 			System.out.println(book.toString());
 		}
-		
 	
-	}
-
+	
+	} 
 }
+	
+		
+
+
